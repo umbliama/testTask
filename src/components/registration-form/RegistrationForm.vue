@@ -58,7 +58,7 @@
           </div>
           <div class="registration-form__form-group">
             <label class="registration-form__label">country</label>
-            <v-select class="registration-form__select"  :options="getCountries" label="title">
+            <v-select @input="updateField('country',user.country)" v-model="user.country" class="registration-form__select"  :options="getCountries" label="title">
   
               </v-select>
           </div>
@@ -76,7 +76,7 @@
 
           <div class="registration-form__form-group">
             <label class="registration-form__label">date of birth</label>
-            <datetime input-class="registration-form__input" v-model="user.birth" type="datetime"    @input="updateField('birth',user.birth)"  format="D"></datetime>
+            <datetime input-class="registration-form__input" v-model="user.birth"   @input="updateField('birth',user.birth)"  format="D"></datetime>
           </div>
 
           <div class="registration-form__form-group">
